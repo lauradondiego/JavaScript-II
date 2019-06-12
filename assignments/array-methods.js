@@ -92,9 +92,11 @@ console.log(largeShirts);
 // The donations need to be tallied up and reported for tax purposes.
 // Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
-const donationTally = runners.reduce((acc, currentValue) => {
-    return acc += currentValue.donationTarunner.donation
-})
+ticketPriceTotal = runners.reduce((donation, runner) =>
+{return donation += runner.donation}, 0);
+    // let donationTally = item.donation
+    // buckets['donation'] += donationTally;
+    // return buckets
 
 console.log(ticketPriceTotal);
 

@@ -80,12 +80,22 @@ console.log(allCaps);
 // Return an array named largeShirts that contains information about the runners that
 // have a shirt size of L and log the result
 let largeShirts = [];
+const shirtSizes = runners.filter(function(runner) {
+    // return runner.shirt_size;
+    // console.log(runner.shirt_size)
+    return runner.shirt_size === "L";
+})
+largeShirts.push(shirtSizes);
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes.
 // Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
+const donationTally = runners.reduce((acc, currentValue) => {
+    return acc += currentValue.donationTarunner.donation
+})
+
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
